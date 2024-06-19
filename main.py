@@ -8,12 +8,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 from sklearn.datasets import load_wine
 from sklearn.preprocessing import StandardScaler
-from src.Bayesian_Optimizer import BayesianOptimizer
-from src.Objective_Bayesian import objective_function
-from src.Objective_Hyperopt import hyperopt_objective
-from src.Cross_validation import cross_validate_with_params
-from src.Learning_Rate_Distribution import learning_rate_distribution
-from src.Objective_Value_Distribution import objective_value_distribution
+from functions.Bayesian_Optimizer import BayesianOptimizerfxn
+from functions.Objective_Bayesian import objective_function
+from functions.Objective_Hyperopt import hyperopt_objective
+from functions.Cross_validation import cross_validate_with_params
+from functions.Learning_Rate_Distribution import learning_rate_distribution
+from functions.Objective_Value_Distribution import objective_value_distribution
 import matplotlib.pyplot as plt
 from hyperopt import fmin, tpe, hp, Trials, STATUS_OK
 
@@ -26,7 +26,7 @@ float_param_ranges = {
 
 int_param_candidates = {}
 
-optimizer = BayesianOptimizer(
+optimizer = BayesianOptimizerfxn(
     func=objective_function,
     float_param_ranges=float_param_ranges,
     int_param_candidates=int_param_candidates,

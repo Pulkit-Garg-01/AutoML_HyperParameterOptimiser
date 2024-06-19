@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
-class BayesianOptimizer:
+class BayesianOptimizerfxn:
     def __init__(
             self,
             func,
